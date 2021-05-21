@@ -28,8 +28,9 @@ SELECT tableoid::regclass FROM metrics
 ```
 
 Decompression might often be employed in the event that you need to backfill or
-update data that lives in a compressed chunk, as TimescaleDB does not currenty
-support modifying (inserting into, updating, deleted from) compressed chunks.
+update data that lives in a compressed chunk, as TimescaleDB only partially
+supports modifying (inserting into, not updating or deleting from) compressed
+chunks.
 
 Next we walk you through the instructions for preparing your table for
 inserting or backfilling data.   The general approach has four steps:
